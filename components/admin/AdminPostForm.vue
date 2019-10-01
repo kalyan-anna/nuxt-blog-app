@@ -42,7 +42,9 @@ export default {
     };
   },
   methods: {
-    onSave() {},
+    onSave() {
+      this.$emit("submit", this.editedPost);
+    },
     onCancel() {
       this.$router.push("/admin");
     }
