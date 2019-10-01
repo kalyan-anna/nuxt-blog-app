@@ -7,7 +7,7 @@
       :is-admin="isAdmin"
       :thumbnail="post.thumbnail"
       :title="post.title"
-      :previewText="post.previewText"
+      :preview="post.preview"
     />
   </section>
 </template>

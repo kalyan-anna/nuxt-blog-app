@@ -31,6 +31,9 @@ const createStore = () => {
     getters: {
       loadedPosts(state) {
         return state.loadedPosts;
+      },
+      getPostById: state => id => {
+        return state.loadedPosts.find(post => post.id === id);
       }
     }
   });

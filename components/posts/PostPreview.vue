@@ -4,7 +4,7 @@
       <div class="post-thumbnail" :style="{backgroundImage: 'url(' + thumbnail + ')'}"></div>
       <div class="post-content">
         <h1>{{ title }}</h1>
-        <p>{{ previewText }}</p>
+        <p>{{ preview }}</p>
       </div>
     </article>
   </nuxt-link>
@@ -22,7 +22,7 @@ export default {
       type: String,
       required: true
     },
-    previewText: {
+    preview: {
       type: String,
       required: true
     },

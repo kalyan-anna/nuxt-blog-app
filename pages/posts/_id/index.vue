@@ -21,26 +21,10 @@
 
 <script>
 export default {
-  data() {
-    return {
-      loadedPost: null
-    };
-  },
-  asyncData(context, callback) {
-    setTimeout(() => {
-      callback(null, {
-        loadedPost: {
-          id: "1",
-          thumbnail:
-            "https://www.fool.com.au/wp-content/uploads/2019/03/AI-circuit-board-tech-16.9.jpg",
-          title: `New Post (ID: ${context.route.params.id})`,
-          previewText: "This is my first post!",
-          content: "some dummy text which is definitely not preview",
-          author: "Kalyan",
-          updatedDate: new Date()
-        }
-      });
-    }, 1000);
+  computed: {
+    loadedPost() {
+      return this.$store.getters.getPostById(this.$route.params.id);
+    }
   }
 };
 </script>
