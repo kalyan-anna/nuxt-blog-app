@@ -3,35 +3,15 @@
     <section class="intro">
       <h1>Get the latest tech news!</h1>
     </section>
-    <section class="featured-posts">
-      <PostPreview
-        id="1"
-        thumbnail="https://www.fool.com.au/wp-content/uploads/2019/03/AI-circuit-board-tech-16.9.jpg"
-        title="Hello there!"
-        previewText="This is my first post!"
-      />
-      <PostPreview
-        id="2"
-        thumbnail="https://www.brookings.edu/wp-content/uploads/2017/11/metro_20171121_tech-empowers-tech-polarizes-mark-muro.jpg"
-        title="Post title 2"
-        previewText="This is second post!"
-      />
-      <PostPreview
-        id="3"
-        thumbnail="https://www.brookings.edu/wp-content/uploads/2017/11/metro_20171121_tech-empowers-tech-polarizes-mark-muro.jpg"
-        title="Post title 3"
-        previewText="This is third post!"
-      />
-    </section>
+    <PostList />
   </div>
 </template>
 
 <script>
-import PostPreview from "@/components/posts/PostPreview";
-
+import PostList from "@/components/posts/PostList";
 export default {
   components: {
-    PostPreview
+    PostList
   }
 };
 </script>
@@ -66,14 +46,5 @@ export default {
   .intro h1 {
     font-size: 2rem;
   }
-}
-
-.featured-posts {
-  display: flex;
-  padding: 20px;
-  box-sizing: border-box;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
 }
 </style>
