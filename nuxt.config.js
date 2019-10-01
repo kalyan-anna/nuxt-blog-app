@@ -53,5 +53,8 @@ module.exports = {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  env: {
+    baseUrl: 'https://nuxt-blog-e9a13.firebaseio.com'
   }
 };
