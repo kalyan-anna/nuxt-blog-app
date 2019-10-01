@@ -1,25 +1,13 @@
 <template>
   <section class="post-list">
     <PostPreview
-      id="1"
+      v-for="post in posts"
+      :key="post.id"
+      :id="post.id"
       :is-admin="isAdmin"
-      thumbnail="https://www.fool.com.au/wp-content/uploads/2019/03/AI-circuit-board-tech-16.9.jpg"
-      title="Hello there!"
-      previewText="This is my first post!"
-    />
-    <PostPreview
-      id="2"
-      :is-admin="isAdmin"
-      thumbnail="https://www.brookings.edu/wp-content/uploads/2017/11/metro_20171121_tech-empowers-tech-polarizes-mark-muro.jpg"
-      title="Post title 2"
-      previewText="This is second post!"
-    />
-    <PostPreview
-      id="3"
-      :is-admin="isAdmin"
-      thumbnail="https://www.brookings.edu/wp-content/uploads/2017/11/metro_20171121_tech-empowers-tech-polarizes-mark-muro.jpg"
-      title="Post title 3"
-      previewText="This is third post!"
+      :thumbnail="post.thumbnail"
+      :title="post.title"
+      :previewText="post.previewText"
     />
   </section>
 </template>
@@ -34,6 +22,10 @@ export default {
   props: {
     isAdmin: {
       type: Boolean
+    },
+    posts: {
+      type: Array,
+      required: true
     }
   }
 };
